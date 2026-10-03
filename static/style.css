@@ -1,0 +1,378 @@
+* {
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #172033;
+
+    background: #f4f7fb;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc
+        );
+}
+
+
+.page {
+
+    width: min(
+        900px,
+        92%
+    );
+
+    margin: auto;
+
+    padding:
+        50px
+        0
+        80px;
+}
+
+
+/* HEADER */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.logo {
+
+    font-size: 1.1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #5b46d6;
+
+    text-transform: uppercase;
+}
+
+
+.header h1 {
+
+    margin:
+        10px
+        0;
+
+    font-size:
+        clamp(
+            2rem,
+            6vw,
+            3.3rem
+        );
+}
+
+
+.header p {
+
+    color: #687386;
+
+    font-size: 1.05rem;
+}
+
+
+/* CARD */
+
+.main-card,
+.result-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    margin-top: 20px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            25,
+            35,
+            65,
+            0.08
+        );
+}
+
+
+/* FORM */
+
+.form-group {
+
+    margin-bottom: 22px;
+}
+
+
+label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        #d8deea;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    font-family: inherit;
+
+    background: white;
+
+    outline: none;
+}
+
+
+select:focus,
+textarea:focus {
+
+    border-color:
+        #5b46d6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            91,
+            70,
+            214,
+            0.1
+        );
+}
+
+
+textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+
+/* BUTTON */
+
+.generate-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        #5b46d6;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+
+.generate-btn:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.generate-btn:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+}
+
+
+/* STATUS */
+
+.status {
+
+    min-height: 25px;
+
+    margin-top: 14px;
+
+    color: #687386;
+}
+
+
+.error {
+
+    color: #b42318;
+}
+
+
+/* RESULT */
+
+.result-card h2 {
+
+    margin-top: 0;
+}
+
+
+.answer {
+
+    white-space: pre-wrap;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+}
+
+
+/* QUIZ */
+
+.quiz-question {
+
+    padding:
+        20px
+        0;
+
+    border-top:
+        1px solid
+        #e5e9f0;
+}
+
+
+.quiz-question:first-child {
+
+    border-top: none;
+}
+
+
+.option {
+
+    display: block;
+
+    padding: 9px;
+
+    margin:
+        6px
+        0;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+.option:hover {
+
+    background:
+        #f5f3ff;
+}
+
+
+.feedback {
+
+    margin-top: 10px;
+
+    font-weight: 700;
+}
+
+
+/* LEARNING PATH */
+
+.learning-step {
+
+    border-left:
+        4px solid
+        #5b46d6;
+
+    padding:
+        15px
+        18px;
+
+    margin:
+        16px
+        0;
+
+    background:
+        #f8f7ff;
+
+    border-radius:
+        0
+        12px
+        12px
+        0;
+}
+
+
+.learning-step h3 {
+
+    margin-top: 0;
+
+    color: #5b46d6;
+}
+
+
+/* MOBILE */
+
+@media (
+    max-width: 600px
+) {
+
+    .page {
+
+        padding-top: 30px;
+    }
+
+
+    .main-card,
+    .result-card {
+
+        padding: 20px;
+    }
+
+
+    .header h1 {
+
+        font-size: 2.1rem;
+    }
+
+}

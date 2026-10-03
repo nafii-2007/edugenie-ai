@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            EduGenie
+        </div>
+
+        <h1>
+            Learn Smarter with AI
+        </h1>
+
+        <p>
+            Your intelligent educational assistant
+        </p>
+
+    </header>
+
+
+    <!-- MAIN CARD -->
+
+    <main class="main-card">
+
+        <div class="form-group">
+
+            <label for="task">
+                Choose a Task
+            </label>
+
+            <select id="task">
+
+                <option value="qa">
+                    Ask a Question
+                </option>
+
+                <option value="explain">
+                    Explain a Topic
+                </option>
+
+                <option value="quiz">
+                    Generate Quiz
+                </option>
+
+                <option value="summarize">
+                    Summarize Text
+                </option>
+
+                <option value="learn">
+                    Learning Path
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="inputText">
+                Enter Your Content
+            </label>
+
+            <textarea
+                id="inputText"
+                rows="9"
+                placeholder="Ask a question or enter your topic..."
+            ></textarea>
+
+        </div>
+
+
+        <button
+            id="submitBtn"
+            class="generate-btn"
+        >
+            Generate
+        </button>
+
+
+        <div
+            id="status"
+            class="status"
+        ></div>
+
+    </main>
+
+
+    <!-- RESULT -->
+
+    <section
+        id="result"
+        class="result-card"
+        hidden
+    >
+
+        <h2>
+            Result
+        </h2>
+
+        <div
+            id="resultContent"
+        ></div>
+
+    </section>
+
+
+</div>
+
+
+<script
+    src="{{ url_for('static', path='app.js') }}"
+></script>
+
+</body>
+
+</html>
